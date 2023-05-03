@@ -59,3 +59,42 @@ console.log(result8);//should be 'Hi There!'
 let result9 = tripleThreat(["ASDF", "BLAH", "Oh!", "Hi", "There!"], 2);
 console.log(result9);//should be 'Oh! Hi There!'
 
+// Create a function that takes in an array of employee objects. Each employee object will come in with a property called `yearsOfExperience`.
+// Your function should return the total years of experience for all of the employees.
+
+function exp(array){
+    let b=0;
+    for(let i=0; i<array.length; i++){
+       b+= array[i].yearsOfExperience;
+    }
+    return b;
+}
+
+let result10 = exp([
+    { name: "Tony", yearsOfExperience: 10 }, 
+    { name: "Carla", yearsOfExperience: 4 }
+]);
+console.log(result10);//should be 14
+let result11 = exp([
+    { name: "Tony", yearsOfExperience: 10 }, 
+    { name: "Carla", yearsOfExperience: 4 },
+    { name: "Kris", yearsOfExperience: 14 }
+]);
+console.log(result11);//should be 28
+
+// Create a function that takes in an array of arrays. Add up all of the
+//  numbers in all of the arrays and return the value.
+
+function arraySquared(array){
+    let value = 0;
+    for(let i=0; i<array.length; i++){
+        for (let j=0; j<array[i].length; j++){
+            value+=array[i][j];
+        }
+    }
+    return value;
+}
+let result12 = arraySquared([ [1, 2], [3, 4, 5] ]);
+console.log(result12);//should be 15
+let result13 = arraySquared([ [1, 2], [3, 4, 5], [6] ]);
+console.log(result13);//should be 21
