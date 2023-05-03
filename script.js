@@ -43,3 +43,19 @@ let result6 = superCoolArray([1, 2, 3, 4, 5]);
 console.log(result6);//should be 6
 let result7 = superCoolArray([6, 7, 8, 9, 10, 11, 12]);
 console.log(result7);//should be 18
+
+// Create a function that takes two parameters. The first parameter is an array, the second parameter will be a number.
+
+// Your function should return a string that combines all of the values starting at the index of the number passed in through the end of the array.
+function tripleThreat(array, num){
+    let b = '';
+    for (i=num; i<array.length; i++){
+        b += array[i]+" ";
+    }
+    return b;
+}
+let result8 = tripleThreat(["ASDF", "BLAH", "Oh!", "Hi", "There!"], 3);
+console.log(result8);//should be 'Hi There!'
+let result9 = tripleThreat(["ASDF", "BLAH", "Oh!", "Hi", "There!"], 2);
+console.log(result9);//should be 'Oh! Hi There!'
+
